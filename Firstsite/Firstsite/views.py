@@ -8,16 +8,19 @@ def index(request):
 
 def Conversion(request):
     text=request.GET.get('textfield','default')
-    Check = request.GET.get('Doit','Off')
-    print(Check)
-    analyzed=''
-    if Check=='on':
+    check1 = request.GET.get('lower','off')
+    check2 = request.GET.get('upper','off')
+    check3 = request.GET.get('space','off')
+    
+    #print(Check)
+    dict = {}
+    low=''
+    if check1=='on':
         for char in text:
             if 'a'<=char<='z':
-                analyzed = analyzed + chr(ord(char)-97+65)
-            else: analyzed = analyzed + char    
-        dict={'purpose':'Without lowercase','analyzed':analyzed}
-        return render(request,'result.html',dict)
+                low = low + chr(ord(char)-97+65)
+            else: low = low + char    
+        dict={'ToLower':''}
     else :
         return HttpResponse('Please on the check button')
     
