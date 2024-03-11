@@ -1,0 +1,13 @@
+asgiref==3.7.2
+backoff==2.2.1
+branca==0.7.0
+charset-normalizer==3.3.2
+Django==5.0.3
+folium==0.15.0
+Jinja2==3.1.2
+opencage==2.3.1
+phonenumbers==8.13.26
+PythonTurtle==0.3.2
+requests==2.31.0
+sqlparse==0.4.4
+typing_extensions==4.10.0
