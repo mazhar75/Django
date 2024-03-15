@@ -1,0 +1,1 @@
+web gunicorn CasearCipher.wsgi:application --log-file -
