@@ -42,7 +42,7 @@
     </div>
     <div class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh;">
         
-        <form action='/interface' method='get'>
+        <form action='/interface' method='post'>  {% csrf_token %} 
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Write or paste your texts here:</label></br>
                 <textarea name="textfield" class="form-control" id="exampleFormControlTextarea1" rows="3" style="width: 751px; height: 145px;"></textarea>

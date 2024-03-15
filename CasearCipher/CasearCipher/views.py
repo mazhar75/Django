@@ -5,9 +5,10 @@ def index(request):
     return render(request,'index.html')
 
 def interface(request):
-    text = request.GET.get('textfield', 'You did not enter text')
-    key = request.GET.get('key', '0')
-    en = request.GET.get('en', 'de')
+    text = request.POST.get('textfield', 'You did not enter text')
+    key = request.POST.get('key', '0')
+    en = request.POST.get('en', 'de')
+    print(key)
     print("Text:", text)
     print("Key:", key)
     print("Encryption:", en)
